@@ -1,0 +1,6 @@
+name: ispunet
+version: 1.0.0
+description: ISPU — kualitas udara Indonesia (KLHK). Cek udara per koordinat/kota, detail stasiun + riwayat 24 jam, kategori ISPU dan rekomendasi kesehatan.
+author: hanafi
+provides_tools:
+  - ispu
