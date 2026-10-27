@@ -32,30 +32,22 @@ def api_signature() -> str:
     return os.environ.get("ISPUNET_API_SIGNATURE", DEFAULT_API_SIGNATURE)
 
 
-# Rekomendasi kesehatan per nilai_uid — persis dari api.service.ts statusRekomendasi.
-RECOMMENDATIONS: dict[int, str] = {
-    1: "Sangat baik melakukan kegiatan di luar",
-    2: (
-        "Kelompok sensitif: kurangi aktivitas fisik yang terlalu lama atau berat. "
-        "Setiap orang: masih dapat beraktivitas di luar."
-    ),
-    3: (
-        "Penderita asma: harus mengikuti petunjuk kesehatan untuk asma dan menyimpan obat asma. "
-        "Penderita penyakit jantung: gejala seperti palpitasi, sesak napas, atau kelelahan yang "
-        "tidak biasa mungkin mengindikasikan masalah serius. "
-        "Setiap orang: mengurangi aktivitas fisik yang terlalu lama di luar ruangan."
-    ),
-    4: (
-        "Kelompok sensitif: hindari semua aktivitas di luar. Perbanyak aktivitas di dalam ruangan "
-        "atau lakukan penjadwalan ulang pada waktu dengan kualitas udara yang baik. "
-        "Setiap orang: hindari aktivitas fisik yang terlalu lama di luar ruangan, pertimbangkan "
-        "untuk melakukan aktivitas di dalam ruangan."
-    ),
-    5: (
-        "Kelompok sensitif: tetap di dalam ruangan dan hanya melakukan sedikit aktivitas. "
-        "Setiap orang: hindari semua aktivitas di luar."
-    ),
-}
+# Rekomendasi kesehatan, daftar polutan, dan ambang data ada di `normalize`
+# (satu sumber untuk paket, plugin, dan skill). Diekspor ulang di sini supaya
+# `ispunet.constants.RECOMMENDATIONS` tetap menjadi tempat yang lazim dilihat.
+from .normalize import (  # noqa: E402  (dipisah agar blok env di atas tetap terbaca)
+    ISPU_MAX,
+    KONSENTRASI_MAX,
+    OFFLINE_RECOMMENDATION,
+    POLLUTANT_LABEL,
+    POLLUTANTS,
+    RECOMMENDATIONS,
+    STALE_HOURS,
+)
 
-# Parameter polutan yang dilaporkan stasiun.
-POLLUTANTS = ("pm10", "pm25", "so2", "co", "o3", "no2", "hc")
+__all__ = [
+    "DEFAULT_BASE_URL", "DEFAULT_API_KEY", "DEFAULT_API_SIGNATURE",
+    "REQUEST_TIMEOUT", "RETRY_ATTEMPTS", "base_url", "api_key", "api_signature",
+    "POLLUTANTS", "POLLUTANT_LABEL", "RECOMMENDATIONS", "OFFLINE_RECOMMENDATION",
+    "ISPU_MAX", "KONSENTRASI_MAX", "STALE_HOURS",
+]

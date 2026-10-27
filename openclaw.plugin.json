@@ -2,7 +2,7 @@
   "id": "ispunet",
   "name": "ISPUNet",
   "description": "Kualitas udara / ISPU Indonesia (KLHK): cek per lokasi, detail stasiun + riwayat 24 jam, kategori ISPU, rekomendasi kesehatan.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "skills": ["skills/ispunet"],
   "configSchema": {
     "type": "object",

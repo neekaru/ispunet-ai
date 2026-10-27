@@ -1,0 +1,818 @@
+{
+ "id_stasiun": "KABUPATEN_KOTAWARINGINTIMUR",
+ "waktu": "27-Oktober-2026 18:00:00",
+ "lat": "-2.535559892654419",
+ "lon": "112.87799835205078",
+ "pm10": "338",
+ "pm25": "371",
+ "so2": "20",
+ "co": "6",
+ "o3": "44",
+ "no2": "5",
+ "hc": null,
+ "p_pm10": 81,
+ "p_pm25": 100,
+ "p_so2": 100,
+ "p_co": 100,
+ "p_o3": 100,
+ "p_no2": 100,
+ "p_hc": 0,
+ "a_pm10": 435.32,
+ "a_pm25": 338.48,
+ "a_so2": 20.55,
+ "a_co": 454.81,
+ "a_o3": 105.28,
+ "a_no2": 7.92,
+ "a_hc": 0,
+ "c_pm10": "5",
+ "c_pm25": "5",
+ "c_so2": "1",
+ "c_co": "1",
+ "c_o3": "1",
+ "c_no2": "1",
+ "c_hc": null,
+ "t_pm10": "1427",
+ "t_pm25": "372",
+ "t_so2": "24",
+ "t_co": "11",
+ "t_o3": "70",
+ "t_no2": "15",
+ "t_hc": null,
+ "nama": "Kabupaten Kotawaringin Timur",
+ "alamat": "FV7P+QGG, Pasir Putih, Kec. Mentawa Baru Ketapang, Kabupaten Kotawaringin Timur, Kalimantan Tengah 74312",
+ "kota": "Kabupaten Kotawaringin Timur",
+ "provinsi": "Kalimantan Tengah",
+ "param": "PM<sub>2.5</sub>",
+ "stasiun_uji": "0",
+ "stasiun_show": "1",
+ "stasiun_show_detail": "1",
+ "p3e": "Kalimanatan",
+ "time_offset": "0",
+ "time_z": "WIB",
+ "is_maintenance": "0",
+ "auto_validation": "1",
+ "tipe": "0",
+ "kelurahan": "",
+ "kecamatan": "",
+ "id_kawasan": null,
+ "val": "371",
+ "cat": "BERBAHAYA",
+ "waktu_24": [
+  "2026-10-26 19:00:00",
+  "2026-10-26 20:00:00",
+  "2026-10-26 21:00:00",
+  "2026-10-26 22:00:00",
+  "2026-10-26 23:00:00",
+  "2026-10-27 00:00:00",
+  "2026-10-27 01:00:00",
+  "2026-10-27 02:00:00",
+  "2026-10-27 03:00:00",
+  "2026-10-27 04:00:00",
+  "2026-10-27 05:00:00",
+  "2026-10-27 06:00:00",
+  "2026-10-27 07:00:00",
+  "2026-10-27 08:00:00",
+  "2026-10-27 09:00:00",
+  "2026-10-27 10:00:00",
+  "2026-10-27 11:00:00",
+  "2026-10-27 12:00:00",
+  "2026-10-27 13:00:00",
+  "2026-10-27 14:00:00",
+  "2026-10-27 15:00:00",
+  "2026-10-27 16:00:00",
+  "2026-10-27 17:00:00",
+  "2026-10-27 18:00:00"
+ ],
+ "pm10_24_rev": [
+  {
+   "nilai": "411",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "465",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "371",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "437",
+   "warna": "#000000"
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": "492",
+   "warna": "#000000"
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": "374",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "338",
+   "warna": "#000000"
+  }
+ ],
+ "pm25_24_rev": [
+  {
+   "nilai": "356",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "368",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "380",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "392",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "401",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "402",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "398",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "395",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "396",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "403",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "411",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "419",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "430",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "441",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "443",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "439",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "433",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "428",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "425",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "421",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "415",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "405",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "388",
+   "warna": "#000000"
+  },
+  {
+   "nilai": "371",
+   "warna": "#000000"
+  }
+ ],
+ "so2_24_rev": [
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "23",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "24",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "24",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "24",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "23",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "22",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "21",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "20",
+   "warna": "#00cc00"
+  }
+ ],
+ "co_24_rev": [
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "6",
+   "warna": "#00cc00"
+  }
+ ],
+ "o3_24_rev": [
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "48",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "49",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "51",
+   "warna": "#0000cc"
+  },
+  {
+   "nilai": "52",
+   "warna": "#0000cc"
+  },
+  {
+   "nilai": "51",
+   "warna": "#0000cc"
+  },
+  {
+   "nilai": "49",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "48",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "47",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "46",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "44",
+   "warna": "#00cc00"
+  }
+ ],
+ "no2_24_rev": [
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  },
+  {
+   "nilai": "5",
+   "warna": "#00cc00"
+  }
+ ],
+ "hc_24_rev": [
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  },
+  {
+   "nilai": null,
+   "warna": null
+  }
+ ],
+ "waktu_24_rev": [
+  "19:00:00",
+  "20:00:00",
+  "21:00:00",
+  "22:00:00",
+  "23:00:00",
+  "00:00:00",
+  "01:00:00",
+  "02:00:00",
+  "03:00:00",
+  "04:00:00",
+  "05:00:00",
+  "06:00:00",
+  "07:00:00",
+  "08:00:00",
+  "09:00:00",
+  "10:00:00",
+  "11:00:00",
+  "12:00:00",
+  "13:00:00",
+  "14:00:00",
+  "15:00:00",
+  "16:00:00",
+  "17:00:00",
+  "18:00:00"
+ ],
+ "pm10_24_max": "492",
+ "pm25_24_max": "443",
+ "so2_24_max": "24",
+ "co_24_max": "6",
+ "o3_24_max": "52",
+ "no2_24_max": "5",
+ "hc_24_max": null,
+ "tanggal_24_rev": [
+  "2026-10-26",
+  "2026-10-27"
+ ],
+ "tipe_text": "KLH/BPLH",
+ "kategori": {
+  "nilai_uid": 5,
+  "nilai": "BERBAHAYA",
+  "keterangan": "Tingkat kualitas udara yang dapat merugikan kesehatan serius pada populasi dan perlu penanganan cepat",
+  "color": "#000000",
+  "color_text": "black",
+  "icon": "https://ispu.kemenlh.go.id/apimob/icon/5.png"
+ }
+}

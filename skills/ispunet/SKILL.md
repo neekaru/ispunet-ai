@@ -1,7 +1,7 @@
 ---
 name: ispunet
 description: Cek kualitas udara / ISPU Indonesia — data resmi KLHK.
-version: 1.0.0
+version: 2.0.0
 author: hanafi
 license: MIT
 platforms: [linux, macos, windows]
@@ -38,37 +38,54 @@ OpenClaw: `{baseDir}/scripts/ispunet.py`, Hermes: `${HERMES_SKILL_DIR}/scripts/i
 | Kebutuhan | Perintah |
 |---|---|
 | Udara di koordinat (lat lon) | `python3 {baseDir}/scripts/ispunet.py current -6.2 106.816` |
-| Cari/detail stasiun by ID | `python3 {baseDir}/scripts/ispunet.py station DKI1` |
-| Semua stasiun se-Indonesia | `python3 {baseDir}/scripts/ispunet.py stations --limit 20` |
+| Udara di kota tanpa ID stasiun | `python3 {baseDir}/scripts/ispunet.py current --kota "Palangka Raya"` |
+| Detail stasiun by ID | `python3 {baseDir}/scripts/ispunet.py station DKI1` |
+| Cari stasiun by nama/kota | `python3 {baseDir}/scripts/ispunet.py search samarinda` |
+| Daftar stasiun + filter | `python3 {baseDir}/scripts/ispunet.py stations --q kalimantan --aktif --limit 20` |
+| Banding beberapa kota | `python3 {baseDir}/scripts/ispunet.py compare Banjarmasin Pekanbaru Samarinda` |
 | Definisi kategori ISPU | `python3 {baseDir}/scripts/ispunet.py categories` |
 
 ## Procedure
 
-1. **Koordinat**: Jika user menyebut nama tempat tapi bukan koordinat, cari
-   latitude/longitude kota tsb (geocoding internal), lalu jalankan `current`.
-   Kota besar umumnya punya stasiun; jika `jumlah_stasiun_sekitar` 0, beri tahu
-   user bahwa tidak ada stasiun pemantauan resmi di sekitar lokasi itu.
-2. **Baca hasil `current`**: `stasiun_terdekat.kategori.nilai` = kategori ISPU,
-   `ispu` = angka indeks, `param` = polutan kritis (biasanya PM2.5),
-   `rekomendasi` = saran kesehatan siap pakai.
-3. **Detail stasiun**: bila user ingin riwayat, gunakan `station <id_stasiun>`
-   — hasilnya memuat `riwayat_24jam`.
-4. **Jawab dalam Bahasa Indonesia** bila user bertanya dalam Bahasa Indonesia.
-   Format jawaban: kategori + angka ISPU + polutan utama + rekomendasi.
+1. **Kota, bukan ID**: pakai `current --kota "<Nama Kota>"`. Banyak kota besar
+   TIDAK punya ID di `getStations` (Banjarmasin, Samarinda, Pekanbaru, Palangka
+   Raya) — `search` akan kosong, dan itu bukan berarti tidak ada data.
+2. **Baca hasil `current`**: `primary.ispu` = angka ISPU, `primary.kategori.nilai`
+   = kategori, `primary.param` = polutan kritis, `primary.rekomendasi` = saran
+   kesehatan siap pakai, `catatan` = alasan pemilihan stasiun.
+3. **WAJIB cek kesegaran**: `primary.usang` / `primary.umur_data_jam`. Bila
+   `usang: true`, sampaikan terus terang ("data terakhir X jam lalu") dan JANGAN
+   menyajikannya sebagai kondisi saat ini. Bila `status: "offline"` atau `ispu`
+   null, laporkan stasiun tidak melaporkan ISPU dan sebutkan `pengganti`.
+4. **Detail stasiun**: `station <id_stasiun>` memuat `riwayat_24jam` (slot
+   ber-timestamp lengkap, `cakupan`, `hilang`, `celah`, `mencurigakan`).
+   Bila ID tidak ada, skrip membalas `error` + `saran_id` + `pengganti` — pakai
+   itu, jangan mengarang.
+5. **Jawab dalam Bahasa Indonesia** bila user bertanya dalam Bahasa Indonesia.
+   Format jawaban: kategori + angka ISPU + polutan utama + rekomendasi
+   (+ peringatan kesegaran data bila ada).
 
 ## Pitfalls
 
-- ID stasiun peka huruf besar (mis. `DKI1`, bukan `dki1`). Daftar ID valid ada
-  di output `stations` (field `id_stasiun`).
-- Endpoint upstream kadaluarsa/lambat — skrip sudah retry 3x; jika tetap gagal,
-  laporkan API sedang tidak tersedia, jangan mengarang data.
-- Angka `ispu` adalah indeks (0-500+), BUKAN konsentrasi µg/m³. Konsentrasi ada
-  di field `konsentrasi`.
+- **Jangan pakai `konsentrasi`** — field itu sudah tidak ada. `indeks` = ISPU per
+  polutan, `konsentrasi_rata_rata` = µg/m³ rata-rata 24 jam. Jangan menukar keduanya.
+- `ispu` = indeks (0-500+), BUKAN µg/m³.
 - `kategori.nilai_uid`: 1=BAIK, 2=SEDANG, 3=TIDAK SEHAT, 4=SANGAT TIDAK SEHAT, 5=BERBAHAYA.
+- `is_maintenance` upstream selalu `"0"` (tidak berguna). Status nyata ada di
+  `status` (`aktif`/`offline`) dan `usang`.
+- Nilai bertanda di `mencurigakan` (mis. Palangka Raya indeks 1252/4091) adalah
+  data upstream yang melampaui skala ISPU 500 — jangan dipakai menghitung
+  rata-rata, dan jangan disembunyikan.
+- ID stasiun tidak peka huruf besar/kecil (`dki1` = `DKI1`). Daftar ID valid ada
+  di output `stations`/`search`.
+- Endpoint upstream lambat dan bisa membalas `Too Many Attempts` — skrip sudah
+  retry 3x; jika tetap gagal, laporkan API sedang tidak tersedia, jangan mengarang data.
 
 ## Verification
 
-- `current` mengembalikan `stasiun_terdekat.ispu` berupa angka dan
-  `kategori.nilai` salah satu dari 5 kategori di atas.
-- `station DKI1` mengembalikan objek berisi `riwayat_24jam` non-kosong.
+- `current` mengembalikan `primary.ispu` berupa angka dan `primary.kategori.nilai`
+  salah satu dari 5 kategori di atas — atau `primary` null dengan `alasan_pemilihan`.
+- `station DKI1` mengembalikan objek berisi `riwayat_24jam.seri` non-kosong dan
+  `riwayat_24jam.cakupan`.
+- `station BANJARMASIN` exit code 1 dengan `error`, `saran_id`, dan `pengganti`.
 - Semua perintah exit code 0 saat sukses.
